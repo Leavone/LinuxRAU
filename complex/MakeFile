@@ -1,0 +1,3 @@
+all:
+	g++ main.cpp sort_complex.cpp ComplexNumber.cpp -o main
+
