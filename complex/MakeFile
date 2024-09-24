@@ -1,3 +1,18 @@
-all:
-	g++ main.cpp sort_complex.cpp ComplexNumber.cpp -o main
+all: main
+
+main: main.o sort_complex.o ComplexNumber.o
+	g++ main.o sort_complex.o ComplexNumber.o -o main
+
+main.o: main.cpp sort_complex.o
+	g++ -c main.cpp
+
+sort_complex.o: sort_complex.cpp ComplexNumber.o
+	g++ -c sort_complex.cpp
+
+ComplexNumber.o: ComplexNumber.cpp
+	g++ -c ComplexNumber.cpp
+
+clean:
+	rm main main.o sort_complex.o ComplexNumber.o
+
 
