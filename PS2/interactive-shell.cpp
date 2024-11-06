@@ -134,12 +134,4 @@ int main() {
 		do_command(command_argv, silent);
     }
     return 0;
-    //for (int i = 1; i < argc; ++i) {
-    //    command_argv[i - 1] = argv[i];
-    //}
-    //command_argv[argc - 1] = nullptr;
-    //do_command(command_argv);
-    //delete[] command_argv;
-
-    //return 0;
 }
