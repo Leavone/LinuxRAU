@@ -1,0 +1,3 @@
+Spinlock - 2242243
+Mutex - 116390
+Semaphore - 311099
