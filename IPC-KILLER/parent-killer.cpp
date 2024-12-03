@@ -5,6 +5,12 @@
 
 int main(){
 	pid_t pid = fork();
+	
+	if(pid == -1){
+		perror("Fork failed\n");
+		return 1;
+	}
+
 	if(pid == 0){
 		std::cout<<"[child]: Goodbye, dear parent! This is for greater good...\n";
 		pid_t ppid = getppid();
