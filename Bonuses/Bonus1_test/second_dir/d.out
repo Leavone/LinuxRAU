@@ -1,0 +1,8 @@
+close()  closes  a  file descriptor, so that it no longer refers to any
+       file and may be reused.  Any record locks (see fcntl(2))  held  on  the
+       file  it was associated with, and owned by the process, are removed re‐
+       gardless of the file descriptor that was used to obtain the lock.  This
+       has some unfortunate consequences and one should be extra careful  when
+       using  advisory  record  locking.   See  fcntl(2) for discussion of the
+       risks and consequences as well as for  the  (probably  preferred)  open
+       file description locks.
