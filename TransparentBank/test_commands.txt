@@ -1,0 +1,27 @@
+help
+balance 0 current
+balance 0 min
+balance 0 max
+set_min 0 100
+set_max 0 1000
+balance 0 min
+balance 0 max
+transfer 0 1 100
+credit_all 500
+balance 0 current
+balance 1 current
+transfer 0 1 200
+balance 0 current
+balance 1 current
+freeze 0 on
+transfer 0 1 100
+credit_all 50
+balance 0 current
+balance 1 current
+freeze 0 off
+transfer 0 1 100
+balance 0 current
+balance 1 current
+debit_all 1000
+exit
+
