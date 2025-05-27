@@ -4,7 +4,7 @@
 #include <sstream>
 #include <sys/mman.h>
 #include <fcntl.h>
-#include <unistd.h>  // Added for close() and lseek()
+#include <unistd.h>
 #include <pthread.h>
 #include "bank.h"
 
@@ -17,7 +17,6 @@ Bank* attach_bank() {
         return nullptr;
     }
 
-    // Get bank size
     off_t size = lseek(fd, 0, SEEK_END);
     if(size == -1) {
         perror("lseek");
@@ -124,11 +123,6 @@ bool process_command(Bank* bank, const std::string& cmd) {
         bank->set_max(account, amount);
         return true;
     }
-
-
-
-    // Implement other commands similarly
-
     else if(action == "help") {
         print_help();
         return true;

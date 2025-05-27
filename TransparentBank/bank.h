@@ -102,7 +102,7 @@ public:
 	    int from_balance = from.get_balance();
 	    int to_balance = to.get_balance();
 	
-	    // Check constraints
+	    
 	    if (from.frozen() || to.frozen() ||
 	        from_balance < amount ||
 	        to_balance + amount > to.get_max_balance()) {
@@ -110,7 +110,6 @@ public:
 	        return false;
 	    }
 	
-	    // Apply transfer
 	    from.set_balance(from_balance - amount);
 	    to.set_balance(to_balance + amount);
 
